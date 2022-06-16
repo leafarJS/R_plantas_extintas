@@ -1,0 +1,28 @@
+---
+title: "plantas_extintas"
+author: "jorge callejo"
+date: "16/062022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(kableExtra)
+```
+
+## Introducción
+
+### Estos son sobre plantas extintas son daod de *UNI*, y se obtuvieron del [siguiente repositorio de github:](https://github.com/rfordatascience/tidytuesday)
+
+
+```{r, echo=FALSE}
+plants <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
+actions <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/actions.csv")
+threats <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/threats.csv")
+```
+
+##Datos de sudamérica
+
+El número de especies que hay en sudamérica es de: `r plants %>%  dplyr::filter(continent == "South America") %>%  nrow()` especies
+
