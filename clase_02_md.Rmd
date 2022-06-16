@@ -22,7 +22,7 @@ actions <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/ti
 threats <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/threats.csv")
 ```
 
-##Datos de sudamérica
+##Datos de Sudamérica
 
 El número de especies que hay en sudamérica es de: `r plants %>%  dplyr::filter(continent == "South America") %>%  nrow()` especies, segun la base de datos. 
 
